@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" >
+
+    <listeners>
+        <listener class-name="Listeners_Demo.ListenerTest"/>
+    </listeners>
+    <parameter name="browserName" value="Chrome"></parameter>
+
+
+    <test preserve-order="true" name="Chrome">
+
+<!--       <groups>
+        <run>
+            <include name="sanity"> </include>
+
+        </run>
+    </groups>-->
+        <classes>
+            <class name="Listeners_Demo.LoginTest">
+            <!--<methods>
+                <include name="validLogin"/>
+                <exclude name="invalidLogin"/>
+                <include name="Logout"/>
+            </methods>-->
+        </class>
+        </classes>
+    </test>
+
+    <!--<test preserve-order="true" name="Firefox">
+    <parameter name="browserName" value="Firefox"></parameter>
+
+        <groups>
+            <run>
+                <include name="sanity"> </include>
+                <include name="negativeTest"> </include>
+            </run>
+        </groups>
+
+    &lt;!&ndash; <classes>
+        <class name="Listeners_Demo.LoginTest">
+       <methods>
+            <include name="invalidLogin"/>
+            <include name="validLogin"/>
+            <include name="Logout"/>
+        </methods>
+    </class>
+    </classes>  &ndash;&gt;
+    </test>-->
+
+</suite>
